@@ -5,46 +5,46 @@ const listOfBeers = [
   {
     name:'lager',
     brand:'deschutes',
-    price: '$100.00',
+    price: 100.00,
     abv: '4.5%'
   },
   {
     name:'IPA',
     brand:'deschutes',
-    price: '$10.00',
+    price: 10.00,
     abv: '7.5%'
 
   },
   {
     name:'Double IPA',
     brand:'deschutes',
-    price: '$1.00',
+    price: 1.00,
     abv: '9.5%'
   },
   {
     name:'IPA',
     brand:'deschutes',
-    price: '$10.00',
+    price: 10.00,
     abv: '7.5%'
 
   },
   {
     name:'Double IPA',
     brand:'deschutes',
-    price: '$1.00',
+    price: 1.00,
     abv: '9.5%'
   },
   {
     name:'IPA',
     brand:'deschutes',
-    price: '$10.00',
+    price: 10.00,
     abv: '7.5%'
 
   },
   {
     name:'Double IPA',
     brand:'deschutes',
-    price: '$1.00',
+    price: 1.00,
     abv: '9.5%'
   }
 ];

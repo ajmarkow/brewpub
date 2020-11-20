@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react';]
+import {v4} from 'uuid'
 
 function AddKegForm(props){
   return(
@@ -8,3 +9,5 @@ function AddKegForm(props){
     </React.Fragment>
   );
 }
+
+export default AddKegForm;

@@ -5,8 +5,8 @@ import KegControl from "./components/KegList";
 function App() {
   return (
     <div className="App">
-      <div class="flex h-screen">
-        <div class="m-auto">
+      <div className="flex h-screen">
+        <div className="m-auto">
           <Header />
           <br></br>
           <KegControl />
