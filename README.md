@@ -1,6 +1,6 @@
 # _React Brewpub App_
 
-An app built to practice building a basic react app, using create-react-app to scaffold the project., 11/20/2020
+An app built to practice building a basic react app, using create-react-app to scaffold the project, 11/20/2020
 
 By **AJ Markow**
 
