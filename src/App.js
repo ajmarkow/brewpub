@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import KegList from "./components/KegList";
+import KegControl from "./components/KegList";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <div class="m-auto">
           <Header />
           <br></br>
-          <KegList />
+          <KegControl />
         </div>
       </div>
     </div>

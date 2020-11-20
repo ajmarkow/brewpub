@@ -20,6 +20,32 @@ const listOfBeers = [
     brand:'deschutes',
     price: '$1.00',
     abv: '9.5%'
+  },
+  {
+    name:'IPA',
+    brand:'deschutes',
+    price: '$10.00',
+    abv: '7.5%'
+
+  },
+  {
+    name:'Double IPA',
+    brand:'deschutes',
+    price: '$1.00',
+    abv: '9.5%'
+  },
+  {
+    name:'IPA',
+    brand:'deschutes',
+    price: '$10.00',
+    abv: '7.5%'
+
+  },
+  {
+    name:'Double IPA',
+    brand:'deschutes',
+    price: '$1.00',
+    abv: '9.5%'
   }
 ];
 function KegList() {
