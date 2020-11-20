@@ -12,7 +12,7 @@ class KegControl extends React.Component {
 
   render() {
     let selectedVisibleState = null;
-    l
+
     if (this.state.formVisible) {
       selectedVisibleState = <AddKegForm />;
     } else {
