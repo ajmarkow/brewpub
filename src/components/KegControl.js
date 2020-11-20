@@ -3,10 +3,11 @@ import AddKegForm from "./AddKegForm";
 import KegList from "./KegList";
 
 class KegControl extends React.Component {
+
     constructor(props) {
       super(props);
       this.state = {
-        formVisible: false,
+        formVisible: false
       };
     }
 
@@ -16,30 +17,26 @@ class KegControl extends React.Component {
       }));
     }
     
-    render() {
+    render(){
       let selectedVisibleState = null;
       let buttonText = null;
-      addTicketButton = <button onClick={this.handleClick}>Add ticket</button> // new code
 
-
-      if (this.state.!formVisible) {
-        selectedVisibleState = <Keglist />;
+      if (this.state.formVisible) {
+        selectedVisibleState = <AddKegForm />
         buttonText="See our Selection of Brews"
       } else {
-        selectedVisibleState = <AddKegForm/>;
-        ButtonText="Add a New Keg to the Pub"
-      }
+        selectedVisibleState = <KegList/>
+        buttonText="Add a New Brew"
 
-      return(
-        <React.Fragment>
-          {selectedVisibleState}
-          <br></br>
-          <h1>DOO DOO</h1>
-          {addTicketButton}
-          <button className='bg-black shadow-2xl' onClick={this.handleKegClick}>{buttonText}</button>
-        </React.Fragment>
-      );
     }
+    return(
+      <React.Fragment>
+        {selectedVisibleState}
+        <button className ='px-9 py-6 bg-black text-white active:bg-red-600 font-bold rounded shadow-xl hover: bg-red-500 text-white active:bg-red-600 font-bold rounded shadow-xl' onClick={this.handleKegClick}>{buttonText}</button>
+      </React.Fragment>
+    );
+  }
+
 
 
   }

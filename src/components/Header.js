@@ -9,7 +9,7 @@ function Header() {
   return(
     <React.Fragment>
         <br></br>
-        <div className="self-center w-80 p-4 text-white bg-purple-600 rounded-md shadow-lg">
+        <div className="items-center w-80 p-8 text-white bg-purple-600 rounded-md shadow-lg">
           <h3 style={myStyle}>{name}</h3>
         </div>
     </React.Fragment>

@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import KegControl from "./components/KegList";
+import KegControl from "./components/KegControl";
 
 function App() {
   return (
