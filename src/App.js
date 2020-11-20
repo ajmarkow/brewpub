@@ -1,11 +1,10 @@
-import './App.css';
-import Header from './components/Header';
-import Keg from './components/Keg';
-import KegList from './components/KegList';
+import "./App.css";
+import Header from "./components/Header";
+import KegList from "./components/KegList";
 
 function App() {
   return (
-    <div className="App">        
+    <div className="App">
       <div class="flex h-screen">
         <div class="m-auto">
           <Header />
