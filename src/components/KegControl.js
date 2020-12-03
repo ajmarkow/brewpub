@@ -34,7 +34,7 @@ class KegControl extends React.Component {
         selectedVisibleState = <AddKegForm onSubmit={this.addNewBrew} />
         buttonText="See our Selection of Brews"
       } else {
-        selectedVisibleState = <KegList keglist={this.state.fullListOfBrews}/>;
+        selectedVisibleState = <KegList kegList={this.state.fullListOfBrews}/>;
         buttonText="Add a New Brew"
 
     }
