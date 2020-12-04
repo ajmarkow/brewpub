@@ -10,27 +10,27 @@ function AddKegForm(props){
   return(
     <React.Fragment>
       <form onSubmit={handleNewBrewSubmit}>
-        <label for="name" className='p-10'>Brew Name</label>
+        <label htmlFor="name" className='p-10'>Brew Name</label>
         <br></br>
           <input type='text py-12' className='bg-black-300 border-2 border-black-600' name='name'></input>
           <br></br>
           <br></br>
-          <label for="brand" className='p-10'>Brewer</label>
+          <label htmlFor="brand" className='p-10'>Brewer</label>
         <br></br>
           <input type='text py-12' className='bg-black-300 border-2 border-black-600' name='brand'></input>
           <br></br>
           <br></br>
-          <label for="price" className='p-10'>Price</label>
+          <label htmlFor="price" className='p-10'>Price</label>
         <br></br>
           <input type='text py-12' className='bg-black-300 border-2 border-black-600' name='price'></input>
           <br></br>
           <br></br>
-          <label for="abv" className='p-10'>Alcohol By Volume</label>
+          <label htmlFor="abv" className='p-10'>Alcohol By Volume</label>
         <br></br>
           <input type='text py-12' className='bg-black-300 border-2 border-black-600' name='abv'></input>
           <br></br>
           <br></br>
-          <label for="fluidOunces" className='p-10'>Initial Fluid Oz - Maximum 124oz.</label>
+          <label htmlFor="fluidOunces" className='p-10'>Initial Fluid Oz - Maximum 124oz.</label>
         <br></br>
           <input type='text py-12' className='bg-black-300 border-2 border-black-600' name='fluidOunces'></input>
           <br></br>

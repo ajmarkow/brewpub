@@ -29,11 +29,13 @@ function Keg(props) {
 
 Keg.propTypes = {
   whenKegClicked: PropTypes.func,
+  onClickingIncrement:PropTypes.func,
+  onClickingDecrement:PropTypes.func,
   name: PropTypes.string,
   brand: PropTypes.string,
   price: PropTypes.number,
   abv: PropTypes.number,
-  fluidOunces: PropTypes.number,
+  fluidOunces: PropTypes.number
 };
 
 export default Keg;

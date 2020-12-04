@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="flex h-screen">
-        <div className="m-auto">
+        <div className="m-auto content-center">
           <Header />
           <br></br>
           <KegControl />
