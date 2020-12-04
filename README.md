@@ -21,6 +21,8 @@ An app built for Epicodus that fulfills requirements laid out in the following u
 - Run yarn build.
 - Run yarn start to launch a live server.
 
+Or view a live deployment at [https://firstreactapp.ajm.codes](https://firstreactapp.ajm.codes)
+
 # Project Diagram
 
 ![Diagram of Project Components and Relationships](public/diagram.png?raw=true "Diagram")
