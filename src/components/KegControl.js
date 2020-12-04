@@ -38,13 +38,21 @@ class KegControl extends React.Component {
         formVisible: false
       })
     }
+
+    removeBrew = (id) => {
+      const newFullListofBrews = this.state.fullListOfBrews.filter(keg => keg.id !== id);
+      this.setState({
+        fullListOfBrews: newFullListofBrews,
+        currentBrew: null
+      });
+    }
     
     render(){
       let selectedVisibleState = null;
       let buttonText = null;
 
       if (this.state.currentBrew != null) {
-        selectedVisibleState = <KegDetail keg={this.state.currentBrew} />
+        selectedVisibleState = <KegDetail keg={this.state.currentBrew} onClickingDelete={this.removeBrew}/>
         buttonText= "Back to Full Brew Selection"
       }
 
