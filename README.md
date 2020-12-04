@@ -17,6 +17,7 @@ An app built for Epicodus that fulfills requirements laid out in the following u
 ## Setup/Installation Requirements
 
 - Clone project to computer you'll run this application on.
+- Run yarn install.
 - Run yarn build.
 - Run yarn start to launch a live server.
 

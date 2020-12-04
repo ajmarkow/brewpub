@@ -32,7 +32,7 @@ class KegControl extends React.Component {
       const fullListWithQuantityUpdate = this.state.fullListOfBrews.filter(brew => brew.id !== id).concat(kegUpdated)
       if (individualKeg.fluidOunces <= 124) {
       this.setState({
-        fullListOfBrews:fullListWithQuantityUpdate
+        fullListOfBrews:fullListWithQuantityUpdate,
       })
     }
   }
@@ -42,7 +42,7 @@ class KegControl extends React.Component {
       const fullListWithQuantityUpdate = this.state.fullListOfBrews.filter(brew => brew.id !== id).concat(kegUpdated)
       if (individualKeg.fluidOunces > 0) {
       this.setState({
-        fullListOfBrews:fullListWithQuantityUpdate
+        fullListOfBrews:fullListWithQuantityUpdate,
       });    
     }
   }
