@@ -1,7 +1,7 @@
 import React from "react";
 import AddKegForm from "./AddKegForm";
 import KegList from "./KegList";
-import kegDetail from "./KegDetail";
+import KegDetail from "./KegDetail";
 
 class KegControl extends React.Component {
 
@@ -44,7 +44,7 @@ class KegControl extends React.Component {
       let buttonText = null;
 
       if (this.state.currentBrew != null) {
-        selectedVisibleState = <kegDetail keg={this.state.currentBrew} />
+        selectedVisibleState = <KegDetail keg={this.state.currentBrew} />
         buttonText= "Back to Full Brew Selection"
       }
 
