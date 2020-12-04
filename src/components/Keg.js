@@ -15,6 +15,10 @@ function Keg(props) {
           <h5 className="text-2xl">Price: ${props.price}</h5>
           <br></br>
           <h5 className="text-2xl">Alcohol By Volume: {props.abv} %</h5>
+          <br></br>
+          <h5 className="text-2xl">
+            Fluid Oz Remaining: {props.fluidOunces} oz
+          </h5>
         </div>
       </div>
       <br></br>
@@ -24,11 +28,12 @@ function Keg(props) {
 }
 
 Keg.propTypes = {
-  whenKegClicked:PropTypes.func,
+  whenKegClicked: PropTypes.func,
   name: PropTypes.string,
   brand: PropTypes.string,
   price: PropTypes.number,
   abv: PropTypes.number,
+  fluidOunces: PropTypes.number,
 };
 
 export default Keg;

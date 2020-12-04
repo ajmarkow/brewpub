@@ -35,7 +35,7 @@ class KegControl extends React.Component {
       const updatedFullListOfBrews = this.state.fullListOfBrews.concat(addedBrew)
       this.setState({
         fullListOfBrews: updatedFullListOfBrews,
-        formVisible: false
+        formVisible: false,
       })
     }
 

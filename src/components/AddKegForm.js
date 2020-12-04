@@ -5,7 +5,7 @@ import {v4} from 'uuid'
 function AddKegForm(props){
   function handleNewBrewSubmit(event){
     event.preventDefault();
-    props.onSubmit({name:event.target.name.value, brand:event.target.brand.value,price:event.target.price.value,abv:event.target.abv.value,id:v4()});
+    props.onSubmit({name:event.target.name.value, brand:event.target.brand.value,price:Number(event.target.price.value),abv:Number(event.target.abv.value),fluidOunces:Number(event.target.fluidOunces.value),id:v4()});
   }
   return(
     <React.Fragment>
@@ -28,7 +28,11 @@ function AddKegForm(props){
           <label for="abv" className='p-10'>Alcohol By Volume</label>
         <br></br>
           <input type='text py-12' className='bg-black-300 border-2 border-black-600' name='abv'></input>
-
+          <br></br>
+          <br></br>
+          <label for="fluidOunces" className='p-10'>Initial Fluid Oz - Maximum 124oz.</label>
+        <br></br>
+          <input type='text py-12' className='bg-black-300 border-2 border-black-600' name='fluidOunces'></input>
           <br></br>
           <br></br>
           <br></br>
