@@ -1,14 +1,14 @@
 version = 1
 
 [[analyzers]]
+name = "test-coverage"
+enabled = true
+
+[[analyzers]]
 name = "javascript"
 enabled = true
 
   [analyzers.meta]
-  plugins = ["react"]
   environment = ["nodejs"]
-  style_guide = "standard"
-
-[[transformers]]
-name = "prettier"
-enabled = true
+  plugins = ["react"]
+  style_guide = "airbnb"
