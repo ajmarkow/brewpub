@@ -1,6 +1,7 @@
 import React from "react";
 import AddKegForm from "./AddKegForm";
 import KegList from "./KegList";
+import kegDetail from "./KegDetail";
 
 class KegControl extends React.Component {
 
@@ -8,14 +9,26 @@ class KegControl extends React.Component {
       super(props);
       this.state = {
         formVisible: false,
-        fullListOfBrews: []
+        fullListOfBrews: [],
+        currentBrew: null
       };
     }
 
     handleKegClick = () => {
-      this.setState(prevState => ({
-        formVisible: !prevState.formVisible
-      }));
+  if (this.state.currentBrew != null) {
+    this.setState({
+      formVisible: false,
+      currentBrew: null
+    });  
+  } else {
+    this.setState(prevState => ({formVisible:!prevState.formVisible
+    }));
+  }
+}
+
+    handleUpdatingCurrentBrew = (id) => {
+      const currentBrew= this.state.fullListOfBrews.filter(brew => brew.id === id)[0];
+      this.setState({currentBrew: currentBrew})
     }
 
     addNewBrew = (addedBrew) => {
@@ -30,11 +43,16 @@ class KegControl extends React.Component {
       let selectedVisibleState = null;
       let buttonText = null;
 
-      if (this.state.formVisible) {
+      if (this.state.currentBrew != null) {
+        selectedVisibleState = <kegDetail keg={this.state.currentBrew} />
+        buttonText= "Back to Full Brew Selection"
+      }
+
+      else if (this.state.formVisible) {
         selectedVisibleState = <AddKegForm onSubmit={this.addNewBrew} />
         buttonText="See our Selection of Brews"
       } else {
-        selectedVisibleState = <KegList kegList={this.state.fullListOfBrews}/>;
+        selectedVisibleState = <KegList kegList={this.state.fullListOfBrews} onBrewSelection={this.handleUpdatingCurrentBrew}/>;
         buttonText="Add a New Brew"
 
     }
