@@ -10,8 +10,10 @@ class KegControl extends React.Component {
       this.state = {
         formVisible: false,
         fullListOfBrews: [],
-        currentBrew: null
+        currentBrew: null,
+        count:124
       };
+      this.handleKegClick = this.handleKegClick.bind(this);
     }
 
     handleKegClick = () => {
@@ -28,21 +30,22 @@ class KegControl extends React.Component {
 
     handleClickingIncrement = (id) => {
       const individualKeg = this.state.fullListOfBrews.filter(brew => brew.id === id)[0];
-      const kegUpdated = individualKeg.fluidOunces = individualKeg.fluidOunces + 1
-      const fullListWithQuantityUpdate = this.state.fullListOfBrews.filter(brew => brew.id !== id).concat(kegUpdated)
+      console.log(individualKeg)
+      individualKeg.fluidOunces += 1
+      const fullListWithQuantityUpdate = this.state.fullListOfBrews.filter(brew => brew.id !== id).concat(individualKeg)
       if (individualKeg.fluidOunces <= 124) {
       this.setState({
-        fullListOfBrews:fullListWithQuantityUpdate,
+        fullListOfBrews: fullListWithQuantityUpdate
       })
     }
   }
     handleClickingDecrement = (id) => {
       const individualKeg = this.state.fullListOfBrews.filter(brew => brew.id === id)[0];
-      const kegUpdated = individualKeg.fluidOunces = individualKeg.fluidOunces - 1
-      const fullListWithQuantityUpdate = this.state.fullListOfBrews.filter(brew => brew.id !== id).concat(kegUpdated)
+      individualKeg.fluidOunces -= 1
+      const fullListWithQuantityUpdate = this.state.fullListOfBrews.filter(brew => brew.id !== id).concat(individualKeg)
       if (individualKeg.fluidOunces > 0) {
       this.setState({
-        fullListOfBrews:fullListWithQuantityUpdate,
+        fullListOfBrews:fullListWithQuantityUpdate
       });    
     }
   }
@@ -73,7 +76,7 @@ class KegControl extends React.Component {
       let buttonText = null;
 
       if (this.state.currentBrew != null) {
-        selectedVisibleState = <KegDetail keg={this.state.currentBrew} onClickingDelete={this.removeBrew} onClickingDecrement={this.handleClickingDecrement} onClickingIncrement={this.handleClickingIncrement}/>
+        selectedVisibleState = <KegDetail keg={this.state.currentBrew} onClickingDelete={this.removeBrew} onClickingDecrement={ this.handleClickingDecrement} onClickingIncrement={this.handleClickingIncrement}/>
         buttonText= "Back to Full Brew Selection"
       }
 
