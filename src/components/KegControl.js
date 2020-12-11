@@ -41,7 +41,7 @@ class KegControl extends React.Component {
     }
   };
   handleClickingDecrement = (id) => {
-    if (individualKeg.fluidOunces >= 1) {
+    if (individualKeg.fluidOunces >= 0) {
       const individualKeg = this.state.fullListOfBrews.filter(
         (brew) => brew.id === id
       )[0];
