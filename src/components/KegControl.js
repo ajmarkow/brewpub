@@ -27,10 +27,10 @@ class KegControl extends React.Component {
   };
 
   handleClickingIncrement = (id) => {
+    const individualKeg = this.state.fullListOfBrews.filter(
+      (brew) => brew.id === id
+    )[0];
     if (individualKeg.fluidOunces <= 124) {
-      const individualKeg = this.state.fullListOfBrews.filter(
-        (brew) => brew.id === id
-      )[0];
       individualKeg.fluidOunces += 1;
       const fullListWithQuantityUpdate = this.state.fullListOfBrews
         .filter((brew) => brew.id !== id)
@@ -41,10 +41,10 @@ class KegControl extends React.Component {
     }
   };
   handleClickingDecrement = (id) => {
+    const individualKeg = this.state.fullListOfBrews.filter(
+      (brew) => brew.id === id
+    )[0];
     if (individualKeg.fluidOunces >= 0) {
-      const individualKeg = this.state.fullListOfBrews.filter(
-        (brew) => brew.id === id
-      )[0];
       individualKeg.fluidOunces -= 1;
       const fullListWithQuantityUpdate = this.state.fullListOfBrews
         .filter((brew) => brew.id !== id)
