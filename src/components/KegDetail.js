@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 function KegDetail(props) {
   const { keg, onClickingDelete, onClickingDecrement, onClickingIncrement } = props;
-  console.log(props);
   return (
     <React.Fragment>
       <div className=" h-175 self-center p-4 text-white bg-blue-800 rounded-md shadow-lg">
