@@ -44,7 +44,7 @@ class KegControl extends React.Component {
     const individualKeg = this.state.fullListOfBrews.filter(
       (brew) => brew.id === id
     )[0];
-    if (individualKeg.fluidOunces >= 0) {
+    if (individualKeg.fluidOunces > 0) {
       individualKeg.fluidOunces -= 1;
       const fullListWithQuantityUpdate = this.state.fullListOfBrews
         .filter((brew) => brew.id !== id)
